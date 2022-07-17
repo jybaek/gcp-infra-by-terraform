@@ -9,7 +9,7 @@ It is a [boilerplate code](https://en.wikipedia.org/wiki/Boilerplate_code) proje
 ## Usage
 Specify the path of the key file as an environment variable.
 ```shell
-$ export GOOGLE_CLOUD_KEYFILE_JSON=/path/google/cloud/keyfile
+$ export GOOGLE_CLOUD_KEYFILE_JSON=/path/to/file
 ```
 
 You must enter the project_id at run time. If you don't like it, set it as an environment variable like the one below.
