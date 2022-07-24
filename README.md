@@ -32,6 +32,11 @@ And apply!
 $ terraform apply
 ```
 
+To clean up resources, use the destroy command.
+```shell
+$ terraform destroy
+```
+
 ## Precautions
 Some services require you to enable resources in the GCP Console.
 
