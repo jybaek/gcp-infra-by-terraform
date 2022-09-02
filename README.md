@@ -1,3 +1,5 @@
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine/)
+
 # GCP infra by Terraform
 It is a [boilerplate code](https://en.wikipedia.org/wiki/Boilerplate_code) project that can be used universally. Go to the samples directory and use it. Any contributions are welcome as long as they don't hurt the overall structure. Let's play together!
 
