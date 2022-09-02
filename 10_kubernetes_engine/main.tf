@@ -1,44 +1,35 @@
 provider "google" {}
 
 variable "project_id" {
-  type  = string
+  type        = string
   description = "Enter a unique project-id"
 }
 
 locals {
-  service_name  = "terraform"
-  region        = "us-central1"
+  service_name = "terraform"
+  region       = "us-central1"
 }
 
 
-module "vpc_network" {
-  source       = "./modules/vpc_network"
+module "google_cloud_platform" {
+  source       = "./modules/google_cloud_platform"
   project_id   = var.project_id
   service_name = local.service_name
 }
 
-module "google_service_account" {
-  source       = "./modules/google_service_account"
+module "google_compute_engine" {
+  source       = "./modules/google_compute_engine"
   project_id   = var.project_id
   service_name = local.service_name
 }
 
-module "google_container_cluster" {
-  source       = "./modules/google_container_cluster"
+module "google_kubernetes_engine" {
+  source       = "./modules/google_kubernetes_engine"
   project_id   = var.project_id
   service_name = local.service_name
   region       = local.region
-
-  google_compute_network_id = module.vpc_network.google_compute_network_id
-}
-
-module "google_container_node_pool" {
-  source       = "./modules/google_container_node_pool"
-  project_id   = var.project_id
-  service_name = local.service_name
-
   machine_type = "e2-medium" # 2 vCPU, 4 GB memory
 
-  google_service_account_email = module.google_service_account.google_service_account_email
-  google_container_cluster_id  = module.google_container_cluster.google_container_cluster_id
+  google_compute_network_id    = module.google_compute_engine.google_compute_network_id
+  google_service_account_email = module.google_cloud_platform.google_service_account_email
 }
