@@ -11,21 +11,21 @@ locals {
   zone          = "us-central1-a"
 }
 
-module "vpc_network" {
-  source       = "./modules/vpc_network"
+module "google_compute_engine" {
+  source       = "./modules/google_compute_engine"
   project_id   = var.project_id
   service_name = local.service_name
 }
 
 module "google_artifact_registry_repository" {
-  source       = "./modules/artifact_registry"
+  source       = "./modules/google_artifact_registry"
   project_id   = var.project_id
   service_name = local.service_name
   region       = local.region
 }
 
-module "cloud_run_basic" {
-  source       = "./modules/cloud_run_basic"
+module "google_cloud_run" {
+  source       = "./modules/google_cloud_run"
   project_id   = var.project_id
   service_name = local.service_name
   region       = local.region
