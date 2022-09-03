@@ -1,12 +1,12 @@
 provider "google" {}
 
 variable "project_id" {
-  type  = string
+  type        = string
   description = "Enter a unique project-id"
 }
 
 locals {
-  service_name  = "terraform"
+  service_name = "terraform"
 }
 
 module "gcp_compute_engine" {
