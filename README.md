@@ -10,7 +10,7 @@ It is a [boilerplate code](https://en.wikipedia.org/wiki/Boilerplate_code) proje
 | [02_compute_engine](02_compute_engine)         | Create the following resources: Cloud Load Balancer, Instance templates, Instance groups            |
 | [10_kubernetes_engine](10_kubernetes_engine)   | Create a GKE cluster                                                                                |
 | [20_cloudrun](20_cloudrun)                     | Create an artifact registry and create a cloud run service that takes images from artifact_registry |
-| [30_cloud_sql](30_cloudsql)                    | Create a database                                                                                   |
+| [30_cloud_sql](30_cloud_sql)                   | Create a database                                                                                   |
 
 
 
@@ -27,7 +27,7 @@ $ export GOOGLE_CLOUD_KEYFILE_JSON=/path/to/file
 
 You must enter the project_id at run time. If you don't like it, set it as an environment variable like the one below.
 ```shell
-export TF_VAR_project_id="foo-1234"
+$ export TF_VAR_project_id="foo-1234"
 ```
 
 And go to the samples directory. Run Terraform in terminal like below! You are initializing
