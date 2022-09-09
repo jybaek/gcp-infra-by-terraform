@@ -1,7 +1,9 @@
 # intro
-Create a database.
+
+Create a Bucket.
 
 ## Architecture
+
 Below is an architectural image created after Terraform is executed.
 
-![alt text](./images/30_cloud_sql.drawio.png)
+![alt text](./images/40_cloud_storage.drawio.png)
