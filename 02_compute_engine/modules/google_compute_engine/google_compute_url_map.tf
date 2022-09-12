@@ -4,7 +4,7 @@ resource "google_compute_url_map" "this" {
   default_service = google_compute_backend_service.this.id
 
   host_rule {
-    hosts = ["*"]
+    hosts        = ["*"]
     path_matcher = "allpaths"
   }
 
