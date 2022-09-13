@@ -14,7 +14,7 @@ locals {
 
 module "google_cloud_storage" {
   source        = "./modules/google_cloud_storage"
-  project       = var.project_id
+  project_id    = var.project_id
   location      = local.region
   bucket_name   = local.bucket_name
   method        = ["GET", "HEAD", "PUT", "POST", "DELETE"]

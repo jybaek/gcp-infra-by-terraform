@@ -1,6 +1,7 @@
 resource "google_composer_environment" "this" {
-  name   = var.service_name
-  region = var.region
+  project = var.project_id
+  name    = var.service_name
+  region  = var.region
   config {
     software_config {
       image_version = "composer-2-airflow-2"

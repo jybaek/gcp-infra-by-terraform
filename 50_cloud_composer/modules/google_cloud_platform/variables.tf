@@ -12,3 +12,8 @@ variable "display_name" {
   description = "display_name"
   type        = string
 }
+
+variable "iam_role" {
+  description = "iam_role"
+  type        = string
+}
