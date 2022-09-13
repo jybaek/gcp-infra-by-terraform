@@ -23,6 +23,7 @@ variable "origin" {
 
 variable "method" {
   description = "method list"
+  type        = list(any)
   default     = ["GET", "HEAD", "PUT", "POST", "DELETE"]
 }
 

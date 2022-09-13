@@ -5,27 +5,20 @@ variable "project_id" {
   description = "Enter a unique project-id"
 }
 
-variable "bucket_name" {
-  type        = string
-  description = "Enter a unique bucket-name"
-}
-
-variable "page" {
-  type        = string
-  description = ""
-}
-
-
 locals {
   service_name = "terraform"
   region       = "us-central1"
   zone         = "us-central1-a"
+  bucket_name  = "${local.service_name}-bucket"
 }
 
 module "google_cloud_storage" {
-  source      = "./modules/google_cloud_stroage"
-  bucket_name = var.bucket_name
-  project     = var.project_id
+  source        = "./modules/google_cloud_storage"
+  project       = var.project_id
+  location      = local.region
+  bucket_name   = local.bucket_name
+  method        = ["GET", "HEAD", "PUT", "POST", "DELETE"]
+  storage_class = "STANDARD"
   # website = {
   #     data = {
   #         main_page_suffix = "index.html", 
