@@ -14,8 +14,10 @@ locals {
 }
 
 module "gcp_cloud_platform" {
-  source     = "./modules/google_cloud_platform"
-  project_id = var.project_id
+  source       = "./modules/google_cloud_platform"
+  project_id   = var.project_id
+  account_id   = "compute-engine-account"
+  display_name = "Test Service Account for Compute Engine"
 }
 
 module "gcp_compute_engine" {
