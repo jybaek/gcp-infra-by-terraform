@@ -12,7 +12,7 @@ variable "location" {
   default     = "ASIA-NORTHEAST3"
 }
 
-variable "project" {
+variable "project_id" {
   description = "project id"
 }
 
