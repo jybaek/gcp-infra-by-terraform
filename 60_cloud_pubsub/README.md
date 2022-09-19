@@ -1,5 +1,5 @@
 # intro
-Create Pub/Sub.
+Create one topic and two subscriptions. Subscriptions are push and pull respectively.
 
 ## Architecture
 Below is an architectural image created after Terraform is executed.
