@@ -11,9 +11,9 @@ resource "google_pubsub_subscription" "push" {
 }
 
 resource "google_pubsub_subscription" "pull" {
-  name    = "${var.service_name}-subscription-pull"
-  topic   = google_pubsub_topic.this.name
-  labels  = var.labels
+  name   = "${var.service_name}-subscription-pull"
+  topic  = google_pubsub_topic.this.name
+  labels = var.labels
 
   message_retention_duration = var.message_retention_duration
   retain_acked_messages      = true
