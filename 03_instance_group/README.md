@@ -1,10 +1,14 @@
 # intro
-Create a VM instance
+Create the following resources:
+
+- Cloud Load Balancer
+- Instance templates
+- Instance groups
 
 ## Architecture
 Below is an architectural image created after Terraform is executed.
 
-![alt text](./images/02_compute_engine.drawio.png)
+![alt text](./images/compute-engine.png)
 
 ## Precautions
 

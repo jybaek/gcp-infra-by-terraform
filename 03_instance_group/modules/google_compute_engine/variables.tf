@@ -18,8 +18,23 @@ variable "zone" {
   type        = string
 }
 
+variable "network" {
+  description = "network"
+  type        = string
+}
+
+variable "instance_template_id" {
+  description = "instance_template_id"
+  type        = string
+}
+
 variable "machine_type" {
   description = "machine_type"
+  type        = string
+}
+
+variable "environment" {
+  description = "environment"
   type        = string
 }
 
@@ -33,22 +48,12 @@ variable "tags" {
   type        = any
 }
 
-variable "google_service_account_email" {
-  description = "google_service_account_email"
+variable "instance_group_id" {
+  description = "instance_group_id"
   type        = string
 }
 
-variable "metadata_startup_script" {
-  description = "metadata_startup_script"
+variable "email" {
+  description = "email"
   type        = string
-}
-
-variable "boot_disk_type" {
-  description = "boot_disk_type"
-  type        = string
-  default     = "pd-standard"
-  validation {
-    condition     = contains(["pd-standard", "pd-balanced", "pd-ssd"], var.boot_disk_type)
-    error_message = "Such as pd-standard, pd-balanced or pd-ssd"
-  }
 }

@@ -7,7 +7,8 @@ It is a [boilerplate code](https://en.wikipedia.org/wiki/Boilerplate_code) proje
 | example directory                            | description                                                                                         |
 |----------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | [01_welcome_terraform](01_welcome_terraform) | This is a basic example for training Terraform. Create a VPC in the cloud                           |
-| [02_compute_engine](02_compute_engine)       | Create the following resources: Cloud Load Balancer, Instance templates, Instance groups            |
+| [02_compute_engine](02_compute_engine)       | Create a VM instance                                                                                |
+| [03_instance_group](03_instance_group)       | Create the following resources: Cloud Load Balancer, Instance templates, Instance groups            |
 | [10_kubernetes_engine](10_kubernetes_engine) | Create a GKE cluster                                                                                |
 | [20_cloudrun](20_cloudrun)                   | Create an artifact registry and create a cloud run service that takes images from artifact_registry |
 | [30_cloud_sql](30_cloud_sql)                 | Create a database                                                                                   |
