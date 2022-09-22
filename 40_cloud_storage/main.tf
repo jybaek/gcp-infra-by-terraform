@@ -1,4 +1,6 @@
-provider "google" {}
+provider "google" {
+  project = var.project_id
+}
 
 variable "project_id" {
   type        = string
