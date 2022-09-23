@@ -10,7 +10,7 @@ variable "project_id" {
 locals {
   service_name = "terraform"
   region       = "us-central1"
-  zone         = "us-central1"
+  zone         = "us-central1-a"
   environment  = "dev"
   tags         = ["alice", "bob"]
 }
