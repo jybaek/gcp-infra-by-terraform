@@ -1,3 +1,3 @@
 resource "google_compute_network" "this" {
-  name    = "${var.service_name}-network"
+  name = "${var.service_name}-network"
 }
