@@ -12,6 +12,7 @@ It is a [boilerplate code](https://en.wikipedia.org/wiki/Boilerplate_code) proje
 | [10_kubernetes_engine](10_kubernetes_engine) | Create a GKE cluster                                                                                |
 | [20_cloudrun](20_cloudrun)                   | Create an artifact registry and create a cloud run service that takes images from artifact_registry |
 | [30_cloud_sql](30_cloud_sql)                 | Create a database                                                                                   |
+| [33_alloydb](33_alloydb)                     | Create a AlloyDB                                                                                    |
 | [35_memorystore_redis](35_memorystore_redis) | Create a memorystore(redis)                                                                         |
 | [40_cloud_storage](40_cloud_storage)         | Create a bucket                                                                                     |
 | [50_cloud_composer](50_cloud_composer)       | Create Cloud Composer 2                                                                             |
