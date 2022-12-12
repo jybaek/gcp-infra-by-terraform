@@ -42,5 +42,5 @@ variable "version_retention_period" {
 
 variable "ddl" {
   description = "ddl"
-  type = list(string)
+  type        = list(string)
 }
