@@ -14,6 +14,7 @@ It is a [boilerplate code](https://en.wikipedia.org/wiki/Boilerplate_code) proje
 | [30_cloud_sql](30_cloud_sql)                 | Create a database                                                                                   |
 | [33_alloydb](33_alloydb)                     | Create a AlloyDB                                                                                    |
 | [35_memorystore_redis](35_memorystore_redis) | Create a memorystore(redis)                                                                         |
+| [39_spanner](39_spanner)                     | Create a spanner database                                                                           |
 | [40_cloud_storage](40_cloud_storage)         | Create a bucket                                                                                     |
 | [50_cloud_composer](50_cloud_composer)       | Create Cloud Composer 2                                                                             |
 | [60_cloud_pubpub](60_cloud_pubsub)           | Create one topic and two subscriptions. Subscriptions are push and pull respectively                |
