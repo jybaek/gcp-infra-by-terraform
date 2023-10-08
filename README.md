@@ -19,6 +19,8 @@ It is a [boilerplate code](https://en.wikipedia.org/wiki/Boilerplate_code) proje
 | [50_cloud_composer](50_cloud_composer)       | Create Cloud Composer 2                                                                             |
 | [60_cloud_pubpub](60_cloud_pubsub)           | Create one topic and two subscriptions. Subscriptions are push and pull respectively                |
 
+Check out the [sample](sample) path for more interesting examples!
+
 ## Requirements
 - [Terraform](https://www.terraform.io/)
 - That's all!
