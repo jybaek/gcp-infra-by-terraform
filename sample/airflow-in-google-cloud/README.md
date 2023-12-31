@@ -1,6 +1,6 @@
 # Airflow in Google Cloud
-Google Cloud에서 Airflow를 운영하는 세 가지 방식의 환경을 제공합니다
+We offer three different ways to run Airflow on Google Cloud.
 
-1. [Compute Engine으로 운영](./01_compute_engine)
-2. [GKE 환경에서 운영](./02_kubernetes_engine)
-3. [Cloud Composer](./03_cloud_composer)
+1. [Airflow on Compute Engine](./01_compute_engine)
+2. [Airflow on GKE](./02_kubernetes_engine)
+3. [Airflow on Cloud Composer](./03_cloud_composer)
