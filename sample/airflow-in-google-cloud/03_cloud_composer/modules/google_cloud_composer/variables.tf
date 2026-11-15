@@ -17,8 +17,8 @@ variable "environment_size" {
   type        = string
 
   validation {
-    condition     = contains(["ENVIRONMENT_SIZE_SMALL",
-      "ENVIRONMENT_SIZE_MEDIUM", "ENVIRONMENT_SIZE_LARGE"], var.environment_size)
+    condition = contains(["ENVIRONMENT_SIZE_SMALL",
+    "ENVIRONMENT_SIZE_MEDIUM", "ENVIRONMENT_SIZE_LARGE"], var.environment_size)
     error_message = "Invalid value"
   }
 }
