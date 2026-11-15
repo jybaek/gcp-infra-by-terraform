@@ -25,5 +25,5 @@ module "google_kubernetes_engine" {
   service_name = local.service_name
   region       = local.region
 
-  google_compute_network_id    = module.google_compute_engine.google_compute_network_id
+  google_compute_network_id = module.google_compute_engine.google_compute_network_id
 }
