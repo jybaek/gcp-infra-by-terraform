@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: vllm-ksa
+  namespace: default
+  annotations:
+    iam.gke.io/gcp-service-account: llm-serving-vllm-gsa@<PROJECT_ID>.iam.gserviceaccount.com
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vllm-gemma-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vllm-gemma
+  template:
+    metadata:
+      labels:
+        app: vllm-gemma
+      annotations:
+        gke-gcsfuse/volumes: "true"
+    spec:
+      serviceAccountName: vllm-ksa
+      nodeSelector:
+        cloud.google.com/gke-accelerator: nvidia-l4
+      containers:
+        - name: vllm
+          image: vllm/vllm-openai:latest
+          args:
+            - "--model=google/gemma-2-2b-it"
+            - "--download-dir=/model-cache"
+            - "--gpu-memory-utilization=0.90"
+            - "--port=8000"
+          ports:
+            - containerPort: 8000
+          resources:
+            requests:
+              cpu: "4"
+              memory: "16Gi"
+              nvidia.com/gpu: "1"
+            limits:
+              cpu: "4"
+              memory: "16Gi"
+              nvidia.com/gpu: "1"
+          volumeMounts:
+            - name: gcs-fuse-cache
+              mountPath: /model-cache
+      volumes:
+        - name: gcs-fuse-cache
+          csi:
+            driver: gcsfuse.csi.storage.gke.io
+            volumeAttributes:
+              bucketName: <PROJECT_ID>-llm-serving-models
+              mountOptions: "implicit-dirs"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vllm-gemma-service
+  namespace: default
+spec:
+  selector:
+    app: vllm-gemma
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+  type: ClusterIP
